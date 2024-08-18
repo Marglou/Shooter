@@ -1,0 +1,245 @@
+Feuille de sprint:
+
+SEMAINE 1
+
+-diagramme des classes; premier brouillon de l’architecture des classes; avec 
+interface methodes. savoir comment elle comunique
+-guitlab→ gaufre dessus un dossier avec un rapport semaine par semaine ET LES 
+SPRINT ce qu’on veut faire chaque semaine
+-rapport ce qu’on a fait chaque semaine
+-feuille de sprint
+-test swing avec un hello world et une image
+-bash (majoori)
+-+++makefile sys pour faire tourner des script
+-regarder git quelque chose de fonctionnel
+-créer toures les classes principales (leo)
+
+
+SEMAINE 2 (initiation du jeu, et des personnages)
+
+Leonor:
+*Ce que j'ai fait*
+    - un factory pattern pour les ennemis (version test dans le dossier factory)
+    - une interface PersonnageFactory pour la creation de tous les personnages
+        --> elle est par la suite implémentée dans les factories de chaque type de enemie qui crée l'enemi differament 
+    - un "loader" qui lit un fichier txt pour savoir quel enemi créer pour chaque niveau
+*Recherche et Réfléxion*
+    - je pense que faire une factory pour Player deviens inutile puisque on à que un seul Player
+    - en fonction de l'implementation des armes ça pourait peut-être intéressant de faire un factory 
+    - je pense que ça peut être très intéressant de faire un factory pour la creation du plateau de l'interface graphique
+        --> à voir en fonction de l'implémentation des tuiles
+    - l'utilisation du fichier txt et des factories se fera dans l'initialisation de la partie 
+
+SEMAINE 3 
+
+Marylou et Inès : 
+-Déplacement des personnage(avec les traces de pas)
+-Faire le menu d’armes
+-Attaques (gérer les projectiles les  et le dégâts)
+-Comportements des ennemis 
+-prise en charge des obstacles du plateau ?
+
+Liste Eleacine, Leonor et Majoori:
+- Faire le Plateau Level Loader qui lit le txt du plateau --> fait 
+- faire des contructeurs pour l'initialisation de armes --> semaine 4
+- faire un cardlayout (je pense) --> fait 
+- changer architecture pour avoir access a Game un peu partout --> fait 
+- diminuer / implementer GameScene.java et ScenceMethode  --> fait (enlevées)
+- faire une fonction qui check les txt dans Enregistrement --> semaine 4
+
+
+SEMAINE 4 (gestion des niveaux)
+
+Eleacine: 
+- dévelloper notre base d'image pour mieux modéliser les Attaques (pas tout à fait)
+-travailler sur les obstacles (fait) 
+-finir les niveaux(reporté)
+-les armes sont a avancé(le nombre , leurs effets) (fait)
+
+Leonor: 
+- fonctions d'initialement et de reinitialisation des données de base 
+
+
+
+SEMAINE 5 
+
+général
+
+-Faire les WIN et OVER
+-plateau de niveau
+-Gestion du déblocage des niveaux suivants
+-gestion des ennemis par niveau
+-gestion du déblocage des armes par niveau
+
+Eléacine:
+- changer la taille du plateau pour un plus grand nombre de cases
+- améliorer le blocage du joueur en précense de cases, pour qu'il bloque dans des directions plus agréables
+- finir les armes 
+- commencer a réfléchir au deblocage d'armes selon les niveaux
+- réflexion autour de la game loop
+
+
+Majoori : 
+-Continuer le mode editing pour ennemi aussi
+
+Marylou :
+- continuer à implémenter l'ennemi gardien
+- réfléchir à de nouveaux ennemis
+- déplacement du joueur qui laisse des traces pouvant être repéré par les ennemis
+- peut-être penser à un mode multijoueur possible (pas sur)
+- réunir les armes A3 et A4
+- faire un atribut pour la taille des cases 
+
+Ines :
+-pofinement des armes (elles doivent etre finies)
+-travail sur l'implementation des niveaux 
+
+Leonor:
+- changer le constructeur des enem pour qu'ils prennent des coordonnées en argument pour leur emplacement
+- changer les factories pour lire et appliquer ces coordonnées
+- enchainement / déblocage des niveaux et initialisation des éléments correspondants 
+- faire des tests sur les elements graphiques: changer les cases du plateau par des casses "illustrées"
+    
+
+
+SEMAINE 6
+-vérification de la base
+-regarder des améliorations possiblement dans les temps
+
+Eléacine 
+- améliorer le blocage du joueur en précense de cases, pour qu'il bloque dans des directions plus agréables(en cours)
+- finir les armes 
+- commencer a réfléchir au deblocage d'armes selon les niveaux
+- réflexion autour de la game loop
+
+Marylou :
+- finir les armes
+- finir les ennemis 
+- ajouter des éléments pour le joueur (traces de pas)
+- peut-être du son 
+
+Leonor:
+- faire des tests sur les elements graphiques: changer les cases du plateau par des casses "illustrées"
+- commencer à faire les éléments d'interface utilisateur (settings, menu, règles...)
+Ines :
+- Finition des armes et des ennemis
+
+Majoori : 
+-avancer dans le mode edition
+-réfléchir à implémenter une "sortie"
+-modifier le plateau
+
+SEMAINE 7
+
+Eléacine:
+-design les armes comme les grenades et mines
+-design les munitions 
+-design explosions
+-design objet bloquant table et armoire 
+-et chaque fois faire en sorte que les munitions et mures soit adapter a l'effet escompter
+
+Marylou:
+- terminer l'ennemi avec IA pour qu'il prenne en compte les obstacles
+- faire en sorte qu'on puisse rejouer une fois tous les niveaux terminés
+
+
+Ines:
+-Ajout d'une transition entre niveau
+-Regler les problemes dans les armes (Lorsquon se deplace et que l'arme
+ au sol sort de la distance maximal elle disparait)
+
+Leonor: 
+- reprendre les IA avec Marylou et les implementer pour chaque ennemi si elles fonctionnent
+- rejoindre les cases dans des sous types (Free, Mur, Ralentissement, Obstacles, Block) --> pour faciliter et organiser le code
+- commencer à faire les éléments d'interface utilisateur (settings, menu, règles...)
+
+Majoori ; 
+-apparaitre correctement le plateau
+-mode edition ennemie
+-page campagne et level personnalisé
+
+
+Semaine 8:
+
+Marylou :
+    - finir les ennemis 
+    - reprendre le code pour tous les ennemis 
+
+Leonor: 
+- faire les éléments d'interface utilisateur
+- creer la separation entre jeu avec niveaux prédefinis et niveaux crées 
+- clarifier affichage des armes en haut à gauche, ajouter vies 
+
+Semaine 9:
+
+Marylou:
+    - finir l'ennemiIA 2 (se déplace vers le joueur jusqu'a etre en positon de tir)
+    - page GUI
+
+Eléacine:
+    -commencer effet explosion
+    -differencier arme dans le pop up
+    -definir les salles des differents niveaux
+
+Leonor: 
+    - finir séparation entre jeu avec niveaux prédefinis et niveaux crées 
+    - aider à la définition des differentes "pièces de la maison"
+    - organisation des elements graphiques pour faire mode sombre 
+
+Ines :
+    -Avancer sur le graphisme des armes
+    -Ajouter des caracteristique au armes (si une grenade explose sur une mine les deux explosent faire en sorte qu'ell detruisent les murs cassable etc)
+    -Si tout ça est fini avancer sur les graphisme du jeu en general ou travailler sur d'autre aspect (aider sur les niveau peut etre ? )
+    Semaine 10 :
+
+VACANCES:
+
+Marylou : 
+    - finition du dernier ennemi
+    - aide sur d'autres parties du code si besoin
+    - 
+
+Eléacine : 
+    -ameliorer la distance avec les obstacles pour le joueur
+    -ameliorer les collisions du côté du joueur ou des ennemis
+    -finir definir la force final des differentes armes
+    -finir de creer les niveaux avec les bon ennemies ,bonne décoration
+    -finir les pas des ennemis , peut-être déplacer pour le joueur
+    -première page
+    -mouvement de marche pour les ennemis et joueur
+
+Leonor:
+    - finir séparation entre jeu avec niveaux prédefinis et niveaux crées
+    - aider sur finitions de l'éditeur 
+    - trouver et mettre des images de fond pour les pages UI
+
+Ines :
+    -Regler les probleme d'animation persisatnt sur les armes (urgent)
+    -Implementation des images dans es pieces de la chambre
+    -Peut etre amelioration des armes(jsp)
+
+SEMAINE 12:
+
+Eléacine: 
+
+    - reglage final des armes,nombre d'ennemi par niveaux, qui va avec finitions du cadran d'info des armes en haut a droite
+    - finitions des balles rebondissants (fait)
+    - dernier design ennemi pour celui qui evite les balles
+    - aider si besoin sur le dernier ennemi 
+
+Leonor:
+    - faire un "catalogue" des ennemis et des armes avec leur stat
+    - definir les stats du jeu 
+    - finir schéma des classes pour le rapport
+
+Marylou:
+    - finir dernier ennemi
+    - faire dans settings un tuto pour expliquer le jeu
+    - régler les derniers problèmes
+
+FIN DE PROJET:
+    Eléacine: 
+    -essayer de modifier les pas des joueurs
+    -faire les dernieres cadragent des ennemis et joueur
+    -ameliorer la visualisation de l'arme et de la vie, si ne convient pas
+    
